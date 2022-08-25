@@ -8,7 +8,7 @@ import { MenuItem } from './interface/menu-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Chirpusp Pizza';
+  title = 'Chirpus Pizza';
 
   Category = Category;
 
