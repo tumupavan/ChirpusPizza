@@ -48,6 +48,12 @@ export class AppComponent {
       category: Category.Dessert,
       price: 2.99,
       icon: 'dessert'
+    },
+    {
+      name: 'French Fries',
+      category: Category.Sides,
+      price: 3.99,
+      icon: 'sides'
     }
   ];
 }
