@@ -13,22 +13,7 @@
   <tbody>
     <tr *ngFor="let item of menuItems; index as i">
       <td>{{ item.name }}</td>
-      <td *ngIf="item.category == Category.Breakfast; else lunch">{{ Category[0] }}</td>
-      <ng-template #lunch>
-        <td *ngIf="item.category == Category.Lunch; else dinner">{{ Category[1] }}</td>
-      </ng-template>
-      <ng-template #dinner>
-        <td *ngIf="item.category == Category.Dinner; else sides">{{ Category[2] }}</td>
-      </ng-template>
-      <ng-template #sides>
-        <td *ngIf="item.category == Category.Sides; else salads">{{ Category[3] }}</td>
-      </ng-template>
-      <ng-template #salads>
-        <td *ngIf="item.category == Category.Salads; else dessert">{{ Category[4] }}</td>
-      </ng-template>
-      <ng-template #dessert>
-        <td *ngIf="item.category == Category.Dessert;">{{ Category[5] }}</td>
-      </ng-template>
+      <td>{{ Category[item.category] }}</td>
       <td>{{ item.price | currency }}</td>
       <td>{{ item.icon }}</td>
     </tr>
